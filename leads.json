@@ -394,5 +394,203 @@
       "mx": true,
       "smtp": "invalid"
     }
+  },
+  {
+    "email": "admin@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:38:54.606306",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "saltman@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:38:57.260895",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "info@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:38:58.981131",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "comercial@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:00.666648",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "hr@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:02.282226",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "samaltman@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:03.956126",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "vendas@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:05.760776",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sam.altman@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:07.558295",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "contact@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:09.297510",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "hello@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:10.862834",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "marketing@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:12.431922",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "carreiras@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:14.097583",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sam_altman@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:15.864231",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sales@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:17.637603",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "support@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:19.172266",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "team@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:20.765932",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sam@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:22.299189",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "contato@openai.com",
+    "source_domain": "openai.com",
+    "found_at": "2026-02-05T13:39:23.945563",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
   }
 ]

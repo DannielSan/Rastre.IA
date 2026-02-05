@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     
     # Scraping
     PROXY_URL: str | None = None
+    PROXIES: list[str] = [] # List of proxy URLs
 
     model_config = SettingsConfigDict(
         env_file=os.path.join(BASE_DIR, ".env"),

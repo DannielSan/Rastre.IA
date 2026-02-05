@@ -7,41 +7,32 @@ from playwright.async_api import async_playwright
 
 from src.modules.enrichment.extractor import extract_emails_from_text
 from src.modules.verification.syntax import validate_email_syntax
+from src.utils.browser import browser_utils
 
 logger = logging.getLogger(__name__)
 
 class GoogleSearcher:
+    # ... (init unchanged) ...
     def __init__(self, headless: bool = True):
         self.headless = headless
 
     async def _human_type(self, page, selector: str, text: str):
-        """Simulates human typing with random delays."""
+        # ... (unchanged) ...
         await page.focus(selector)
         for char in text:
             await page.keyboard.type(char)
             await asyncio.sleep(random.uniform(0.05, 0.2)) # Random typing speed
 
     async def search(self, queries: List[str], max_results: int = 15) -> Set[str]:
-        """
-        Performs Google searches for the given queries and extracts emails.
-        
-        Args:
-            queries (List[str]): List of search queries (Dorks).
-            max_results (int): Approximate max results to process per query.
-            
-        Returns:
-            Set[str]: Unique found emails.
-        """
+        # ... (docstring unchanged) ...
         found_emails = set()
         
         async with async_playwright() as p:
-            # Launch with a persistent-looking context to be less suspicious
+            # Persistent context not needed if we want rotation per session
             browser = await p.chromium.launch(headless=self.headless)
-            context = await browser.new_context(
-                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                viewport={"width": 1280, "height": 720},
-                locale="en-US"
-            )
+            
+            # Safe Context with Rotation
+            context = await browser_utils.new_safe_context(browser)
             
             page = await context.new_page()
             

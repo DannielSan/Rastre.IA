@@ -5,6 +5,7 @@ from playwright.async_api import async_playwright, Page, BrowserContext
 
 from src.modules.enrichment.extractor import extract_emails_from_text
 from src.modules.verification.syntax import validate_email_syntax
+from src.utils.browser import browser_utils
 
 logger = logging.getLogger(__name__)
 
@@ -39,9 +40,9 @@ class DomainScraper:
         async with async_playwright() as p:
             # Optimize: Disable images and unnecessary resources
             browser = await p.chromium.launch(headless=self.headless)
-            context = await browser.new_context(
-                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-            )
+            
+            # Use safe context with randomized UA/Proxy
+            context = await browser_utils.new_safe_context(browser)
             
             # Block resources for performance
             await context.route("**/*", lambda route: route.abort() 

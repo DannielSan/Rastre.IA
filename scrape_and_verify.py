@@ -129,6 +129,11 @@ async def process_domain(domain: str, input_name: str = None, output_file: str =
             
         logger.info(f"Saved {len(final_data)} unique leads to {output_file}")
         
+        # Export to CSV automatically
+        from src.modules.export.exporter import export_to_csv
+        csv_file = output_file.replace(".json", ".csv")
+        export_to_csv(final_data, csv_file)
+        
     except Exception as e:
         logger.error(f"Failed to save results: {e}")
 
