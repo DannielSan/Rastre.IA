@@ -22,6 +22,6 @@ def extract_emails_from_text(text: str) -> Set[str]:
         return set()
         
     found = set(EMAIL_REGEX_EXTRACT.findall(text))
-    # Basic cleanup: remove trailing dots that might be part of a sentence
-    cleaned = {e.rstrip('.') for e in found}
+    # Basic cleanup: remove trailing dots/punctuation that might be captured
+    cleaned = {e.rstrip('.,;:)]}') for e in found}
     return cleaned

@@ -1,0 +1,398 @@
+[
+  {
+    "email": "sundar@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:07.326654",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "marketing@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:09.282490",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "team@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:11.050210",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "contato@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:12.846597",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "comercial@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:14.734005",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sundarpichai@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:16.376273",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "carreiras@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:17.956707",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "hello@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:19.593798",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "support@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:21.197959",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "vendas@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:22.746942",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sundar_pichai@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:24.308840",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "admin@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:25.927587",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "hr@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:27.647203",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "spichai@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:29.282442",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "contact@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:31.006278",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sales@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:32.666905",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "sundar.pichai@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:34.209972",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "info@google.com",
+    "source_domain": "google.com",
+    "found_at": "2026-02-05T12:36:35.971556",
+    "status": "catch_all",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "catch_all"
+    }
+  },
+  {
+    "email": "admin@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:20.712260",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "vendas@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:29.717130",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "comercial@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:32.603607",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "guido_rossum@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:35.564690",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "marketing@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:38.427638",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "hello@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:41.555602",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "team@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:44.596196",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "hr@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:47.688980",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "carreiras@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:50.685091",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "guido.rossum@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:54.027478",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "guido@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:14:57.239142",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "guidorossum@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:15:00.286852",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "grossum@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:15:03.368622",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "info@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:15:06.333171",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "support@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:15:09.385095",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "contato@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:15:12.263178",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "contact@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:15:15.258666",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  },
+  {
+    "email": "sales@python.org",
+    "source_domain": "python.org",
+    "found_at": "2026-02-05T13:15:18.334033",
+    "status": "invalid",
+    "verification": {
+      "syntax": true,
+      "mx": true,
+      "smtp": "invalid"
+    }
+  }
+]
