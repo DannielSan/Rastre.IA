@@ -46,6 +46,11 @@ def scrape(
         
     save_results(results, output, format)
 
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskID
+from rich.table import Table
+
+# ... imports ...
+
 @app.command()
 def bulk(
     file: Path = typer.Argument(..., exists=True, help="Path to text file with domains (one per line)"),
@@ -62,26 +67,59 @@ def bulk(
     
     all_results = []
     
-    for i, domain in enumerate(domains, 1):
-        console.print(f"\n[bold blue]--- Processing {i}/{len(domains)}: {domain} ---[/bold blue]")
-        try:
-            # Run pipeline for each domain
-            domain_results = asyncio.run(run_lead_pipeline(domain))
-            all_results.extend(domain_results)
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        console=console
+    ) as progress:
+        task = progress.add_task("[cyan]Processing domains...", total=len(domains))
+        
+        for domain in domains:
+            progress.update(task, description=f"[cyan]Scraping {domain}...")
             
-            # Save progress incrementally (optional, but good for safety)
-            # For now we save at the end to keep it simple, or we could append.
+            try:
+                # Run pipeline for each domain
+                domain_results = asyncio.run(run_lead_pipeline(domain))
+                all_results.extend(domain_results)
+                
+            except Exception as e:
+                console.print(f"[bold red]Error processing {domain}: {e}[/bold red]")
             
-        except Exception as e:
-            console.print(f"[bold red]Error processing {domain}: {e}[/bold red]")
-            continue
+            progress.advance(task)
             
     if all_results:
+        print_summary_table(all_results)
         save_results(all_results, output, format)
     else:
         console.print("[yellow]No results found in bulk process.[/yellow]")
 
+def print_summary_table(results: list):
+    """Prints a summary table of the findings."""
+    table = Table(title="Lead Generation Summary")
+    table.add_column("Email", style="cyan")
+    table.add_column("Domain", style="magenta")
+    table.add_column("Status", style="green")
+    table.add_column("SMTP", style="yellow")
+    
+    for item in results:
+        smtp_status = str(item.get("verification", {}).get("smtp", "N/A"))
+        status_color = "green" if item['status'] == 'valid' else "red"
+        if item['status'] == 'catch_all': status_color = "yellow"
+        
+        table.add_row(
+            item.get("email", "Unknown"),
+            item.get("domain", "Unknown"),
+            f"[{status_color}]{item.get('status', 'Unknown')}[/{status_color}]",
+            smtp_status
+        )
+    
+    console.print(table)
+
 def save_results(results: list, filename_base: str, format: str):
+
+
     """Helper to save results in requested format."""
     console.print(f"\n[bold green]Saving {len(results)} results...[/bold green]")
     

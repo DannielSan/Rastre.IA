@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "LeadScraper - AI Lead Gen",
+    "version": "1.0",
+    "description": "Scrape and verify leads from the current tab using local LeadScraper API.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "LeadScraper"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

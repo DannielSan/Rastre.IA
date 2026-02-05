@@ -58,8 +58,13 @@ class DomainScraper:
                 
                 try:
                     logger.info(f"Visiting {url}...")
-                    # Fast timeout, don't wait mainly for network idle if it's too slow
-                    response = await page.goto(url, timeout=10000, wait_until="domcontentloaded")
+                    # Wait for network idle to ensure SPAs are loaded
+                    response = None
+                    try:
+                        response = await page.goto(url, timeout=15000, wait_until="domcontentloaded")
+                        await page.wait_for_load_state("networkidle", timeout=5000)
+                    except Exception:
+                        pass # Continue even if networkidle times out
                     
                     if not response or response.status >= 400:
                         logger.warning(f"Failed to load {url} (Status: {response.status if response else 'Unknown'})")
@@ -67,16 +72,39 @@ class DomainScraper:
                         
                     content = await page.content()
                     
-                    # Extract emails from visible text and mailto links
-                    # 1. Regex on full content
+                    # 1. Regex on full HTML content
                     raw_emails = extract_emails_from_text(content)
                     
-                    # 2. Check for mailto links specifically (sometimes obfuscated in text but clear in href)
-                    mailto_links = await page.evaluate("""() => {
-                        const links = Array.from(document.querySelectorAll('a[href^="mailto:"]'));
-                        return links.map(link => link.href.replace('mailto:', '').split('?')[0]);
+                    # 2. Advanced DOM Extraction (JS Execution)
+                    # Extracts from: mailto links, generic hrefs, and visible text nodes
+                    dom_emails = await page.evaluate("""() => {
+                        const emails = new Set();
+                        const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g;
+                        
+                        // 1. Scan all 'href' attributes
+                        document.querySelectorAll('*[href]').forEach(el => {
+                            const href = el.getAttribute('href');
+                            if (href && href.includes('mailto:')) {
+                                emails.add(href.replace('mailto:', '').split('?')[0]);
+                            } else if (href && href.match(emailRegex)) {
+                                const match = href.match(emailRegex);
+                                if (match) match.forEach(e => emails.add(e));
+                            }
+                        });
+
+                        // 2. Scan visible text
+                        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+                        let node;
+                        while (node = walker.nextNode()) {
+                            if (node.parentElement && node.parentElement.offsetParent !== null) { // Check visibility
+                                const matches = node.nodeValue.match(emailRegex);
+                                if (matches) matches.forEach(e => emails.add(e));
+                            }
+                        }
+                        
+                        return Array.from(emails);
                     }""")
-                    raw_emails.update(mailto_links)
+                    raw_emails.update(dom_emails)
                     
                     # Filter valid emails
                     for email in raw_emails:

@@ -1,0 +1,248 @@
+Starting pipeline for domain: example.com
+Visiting https://example.com/...
+Visiting https://example.com/contact...
+Failed to load https://example.com/contact (Status: 404)
+Visiting https://example.com/about...
+Failed to load https://example.com/about (Status: 404)
+Visiting https://example.com/team...
+Failed to load https://example.com/team (Status: 404)
+Visiting https://example.com/contato...
+Failed to load https://example.com/contato (Status: 404)
+Visiting https://example.com/sobre...
+Failed to load https://example.com/sobre (Status: 404)
+Visiting https://example.com/equipe...
+Failed to load https://example.com/equipe (Status: 404)
+Starting Google Search (Dorking)...
+Executing Google Dork: site:linkedin.com "example.com" "email"
+Error during search 'site:linkedin.com "example.com" "email"': Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("#search") to be visible
+    - waiting for" https://www.google.com/search?q=site%3Alinkedin.com+%22example.com%22+%22email%22&sca_esv=44ea38d9bdd60463&source=hp&ei=YaKEadTQKOnd5OUPiM-m0QY&iflsig=AFdpzrgAAAAAaYSwcZmeCvly4h121SjRWbwY5YlZD_Sc&ved…" navigation to finish...
+    - navigated to "https://www.google.com/search?q=site%3Alinkedin.com+%22example.com%22+%22email%22&sca_esv=44ea38d9bdd60463&source=hp&ei=YaKEadTQKOnd5OUPiM-m0QY&iflsig=AFdpzrgAAAAAaYSwcZmeCvly4h121SjRWbwY5YlZD_Sc&ved…"
+    - waiting for" https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%2B%2522example.com%2522%2B%2522email%2522%26sca_esv%3D44ea38d9bdd60463%26source%3Dhp%26ei%3DYaKEa…" navigation to finish...
+    - navigated to "https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%2B%2522example.com%2522%2B%2522email%2522%26sca_esv%3D44ea38d9bdd60463%26source%3Dhp%26ei%3DYaKEa…"
+
+Executing Google Dork: site:example.com "email"
+Error during search 'site:example.com "email"': Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"q\"]").first
+    - locator resolved to <input name="q" type="hidden" value="EhAoBAFNcrODjoDiXOr9TQgiGOzEkswGIjDSAR0G1pRoUD5cqQnibJU0mLijSNEisP9Ym6qMH5DTgeN-165zrV5ldAJQzi2M0DcyAVJaAUM"/>
+    - fill("")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not visible
+     - retrying fill action
+       - waiting 500ms
+
+Executing Google Dork: "example.com" "contact" email
+Error during search '"example.com" "contact" email': Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"q\"]").first
+    - locator resolved to <input name="q" type="hidden" value="EhAoBAFNcrODjoDiXOr9TQgiGOzEkswGIjDSAR0G1pRoUD5cqQnibJU0mLijSNEisP9Ym6qMH5DTgeN-165zrV5ldAJQzi2M0DcyAVJaAUM"/>
+    - fill("")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not visible
+     - retrying fill action
+       - waiting 500ms
+
+Total found via Scraping + Google: 0
+Total candidates to verify: 13
+Processed: info@example.com -> risky
+Processed: contact@example.com -> risky
+Processed: admin@example.com -> risky
+Processed: hr@example.com -> risky
+Processed: hello@example.com -> risky
+Processed: team@example.com -> risky
+Processed: vendas@example.com -> risky
+Processed: contato@example.com -> risky
+Processed: sales@example.com -> risky
+Processed: comercial@example.com -> risky
+Processed: carreiras@example.com -> risky
+Processed: support@example.com -> risky
+Processed: marketing@example.com -> risky
+Starting pipeline for domain: python.org
+Visiting https://python.org/...
+Visiting https://python.org/contact...
+Failed to load https://python.org/contact (Status: 404)
+Visiting https://python.org/about...
+Visiting https://python.org/team...
+Failed to load https://python.org/team (Status: 404)
+Visiting https://python.org/contato...
+Failed to load https://python.org/contato (Status: 404)
+Visiting https://python.org/sobre...
+Failed to load https://python.org/sobre (Status: 404)
+Visiting https://python.org/equipe...
+Failed to load https://python.org/equipe (Status: 404)
+Starting Google Search (Dorking)...
+Executing Google Dork: site:linkedin.com "python.org" "email"
+Error during search 'site:linkedin.com "python.org" "email"': Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("#search") to be visible
+    - waiting for navigation to finish...
+    - navigated to "https://www.google.com/search?q=site%3Alinkedin.com+%22python.org%22+%22email%22&sca_esv=44ea38d9bdd60463&source=hp&ei=uqKEaYD9H4T35OUP5JeYwAo&biw=1920&bih=1080&oq=site%3Alinkedin.com+%22python.org%2…"
+    - waiting for" https://www.google.com/search?q=site%3Alinkedin.com+%22python.org%22+%22email%22&sca_esv=44ea38d9bdd60463&source=hp&ei=uqKEaYD9H4T35OUP5JeYwAo&biw=1920&bih=1080&oq=site%3Alinkedin.com+%22python.org%2…" navigation to finish...
+    - navigated to "https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%2B%2522python.org%2522%2B%2522email%2522%26sca_esv%3D44ea38d9bdd60463%26source%3Dhp%26ei%3DuqKEaY…"
+
+Executing Google Dork: site:python.org "email"
+Error during search 'site:python.org "email"': Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"q\"]").first
+    - locator resolved to <input name="q" type="hidden" value="EhAoBAFNcrODjoDiXOr9TQgiGMPFkswGIjC_fK4CYAySf_Pf4RPSHARjL7SBOFosFatAB-3z7zBjSgTL2fAxjbOZWKr9eJs24zEyAVJaAUM"/>
+    - fill("")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not visible
+     - retrying fill action
+       - waiting 500ms
+
+Executing Google Dork: "python.org" "contact" email
+Error during search '"python.org" "contact" email': Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"q\"]").first
+    - locator resolved to <input name="q" type="hidden" value="EhAoBAFNcrODjoDiXOr9TQgiGMPFkswGIjC_fK4CYAySf_Pf4RPSHARjL7SBOFosFatAB-3z7zBjSgTL2fAxjbOZWKr9eJs24zEyAVJaAUM"/>
+    - fill("")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not visible
+     - retrying fill action
+       - waiting 500ms
+
+Total found via Scraping + Google: 0
+Total candidates to verify: 13
+Processed: marketing@python.org -> invalid
+Processed: vendas@python.org -> invalid
+Processed: hello@python.org -> invalid
+Processed: team@python.org -> invalid
+Processed: contato@python.org -> invalid
+Processed: info@python.org -> invalid
+Processed: admin@python.org -> invalid
+Processed: comercial@python.org -> invalid
+Processed: hr@python.org -> invalid
+Processed: support@python.org -> invalid
+Processed: carreiras@python.org -> invalid
+Processed: sales@python.org -> invalid
+Processed: contact@python.org -> invalid
+Starting pipeline for domain: openai.com
+Visiting https://openai.com/...
+Visiting https://openai.com/contact...
+Visiting https://openai.com/about...
+Visiting https://openai.com/team...
+Failed to load https://openai.com/team (Status: 404)
+Visiting https://openai.com/contato...
+Failed to load https://openai.com/contato (Status: 403)
+Visiting https://openai.com/sobre...
+Failed to load https://openai.com/sobre (Status: 403)
+Visiting https://openai.com/equipe...
+Failed to load https://openai.com/equipe (Status: 403)
+Starting Google Search (Dorking)...
+Executing Google Dork: site:linkedin.com "openai.com" "email"
+Error during search 'site:linkedin.com "openai.com" "email"': Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("#search") to be visible
+    - waiting for navigation to finish...
+    - navigated to "https://www.google.com/search?q=site%3Alinkedin.com+%22openai.com%22+%22email%22&sca_esv=44ea38d9bdd60463&source=hp&ei=O6OEaZvCMcu75OUPm_iZiQM&biw=1920&bih=1080&oq=site%3Alinkedin.com+%22openai.com%2…"
+    - waiting for" https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%2B%2522openai.com%2522%2B%2522email%2522%26sca_esv%3D44ea38d9bdd60463%26source%3Dhp%26ei%3DO6OEaZ…" navigation to finish...
+    - navigated to "https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%2B%2522openai.com%2522%2B%2522email%2522%26sca_esv%3D44ea38d9bdd60463%26source%3Dhp%26ei%3DO6OEaZ…"
+
+Executing Google Dork: site:openai.com "email"
+Error during search 'site:openai.com "email"': Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"q\"]").first
+    - locator resolved to <input name="q" type="hidden" value="EhAoBAFNcrODjoDiXOr9TQgiGMXGkswGIjButa2mhtip-IERXE2y78YNlvWlCHuRFnzBrCYCDIftbXJCEV9EMhsH5rxKfzYWM-syAVJaAUM"/>
+    - fill("")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not visible
+     - retrying fill action
+       - waiting 500ms
+
+Executing Google Dork: "openai.com" "contact" email
+Error during search '"openai.com" "contact" email': Locator.clear: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("input[name=\"q\"]").first
+    - locator resolved to <input name="q" type="hidden" value="EhAoBAFNcrODjoDiXOr9TQgiGMXGkswGIjButa2mhtip-IERXE2y78YNlvWlCHuRFnzBrCYCDIftbXJCEV9EMhsH5rxKfzYWM-syAVJaAUM"/>
+    - fill("")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not visible
+     - retrying fill action
+       - waiting 500ms
+
+Total found via Scraping + Google: 0
+Total candidates to verify: 13
+Domain openai.com is Catch-All (Accepted xp34c2ld92uonix@openai.com)
+Processed: vendas@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted g5f69w5wfsrl6gj@openai.com)
+Processed: contato@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted hubyvkwqz265vs0@openai.com)
+Processed: team@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted 904lorzztv56gw1@openai.com)
+Processed: contact@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted d0if3ia6i3vwgoa@openai.com)
+Processed: marketing@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted lk0pxqy8poxae8l@openai.com)
+Processed: admin@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted b9gncqojluq7pvu@openai.com)
+Processed: sales@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted 640tybydm83xpq3@openai.com)
+Processed: comercial@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted 28wecyo1aq4syze@openai.com)
+Processed: carreiras@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted 35zkks8osj4o5or@openai.com)
+Processed: info@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted ywqurb5p0ys3uo9@openai.com)
+Processed: support@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted 6rroly3zagoi83t@openai.com)
+Processed: hello@openai.com -> catch_all
+Domain openai.com is Catch-All (Accepted imrvopcwfgl9hev@openai.com)
+Processed: hr@openai.com -> catch_all
+Exported 39 rows to bulk_leads.csv

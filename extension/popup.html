@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 15px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    button:disabled {
+      background: #ccc;
+    }
+
+    #results {
+      margin-top: 15px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .lead-item {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .status {
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .status-valid {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-catch_all {
+      background: #fef9c3;
+      color: #854d0e;
+    }
+
+    .status-invalid {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .loading {
+      text-align: center;
+      color: #666;
+      padding: 20px;
+      display: none;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>🚀 LeadScraper</h2>
+  <div id="target-domain" style="margin-bottom: 10px; color: #666;">Domínio: ...</div>
+
+  <button id="scan-btn">Escanear Domínio Atual</button>
+
+  <div id="loading" class="loading">
+    Processando... Isso pode levar 1-2 minutos.
+  </div>
+
+  <div id="error" class="error"></div>
+
+  <div id="results"></div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
